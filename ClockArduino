@@ -18,7 +18,7 @@ void setup() {
 
   if (rtc.lostPower()) {
     Serial.println("Питание RTC было потеряно, установим время заново!");
-    rtc.adjust(DateTime(F(DATE), F(TIME)));
+    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
   }
 }
 
